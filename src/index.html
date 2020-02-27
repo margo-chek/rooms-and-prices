@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../dist/style.css" />
-        <title>Rooms and prices</title>
-        <!-- <script src="js/main.js"></script> -->
-    </head>
-    <body class="load">
-        <div class="mainContainer">
-            <div class="header">
-                <div class="title">Тестовый сайт</div>
-
-            </div>
-            <div class="content"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/style.css" />
+    <title>Rooms and prices</title>
+    <!-- <script src="js/main.js"></script> -->
+  </head>
+  <body>
+    <main class="b-page-rooms-prices">
+      <h1 class="b-page-rooms-prices__title">НОМЕРА И ЦЕНЫ</h1>
+      <div class="b-page-rooms-prices__card-container">
+        <div class="b-room-card">
+          <div class="b-room-card__img-container">
+            <img src="assets/room.png" class="b-room-card__img" alt="img"/>
+          </div>
+          <p class="b-room-card__subtitle">Представительский люкс</p>
+          <span class="b-room-card__discription">Эксклюзивный номер с панорамным видом на центр города Москвы</span>
+          <p class="b-room-card__price">
+            от <span class="b-room-card__value">7900</span> руб./сутки
+          </p>
+          <button class="button button-normal">Забронировать</button>
         </div>
-        <script type="text/javascript" src="../dist/bundle.js"></script>
-    </body>
+      </div>
+      <script type="text/javascript" src="../dist/bundle.js"></script>
+    </main>
+  </body>
 </html>
