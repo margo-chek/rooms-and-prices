@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@font-face
+{
+  font-family: 'PT Sans';
+  src: url("../theme/fonts/PTSansRegular.ttf");
+}
+
+@font-face
+{
+  font-family: 'Noto Serif';
+  src: url("../theme/fonts/NotoSerifRegular.ttf");
+}

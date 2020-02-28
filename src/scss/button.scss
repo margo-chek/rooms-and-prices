@@ -1,0 +1,30 @@
+.button {
+  display: block;
+  text-align: center;
+  margin: 20px;
+  min-height: 30px;
+  min-width: 180px;
+  padding: 8px;
+  color: #fff;
+  font-size: 19px;
+  line-height: 32px;
+  border: 1px solid #666;
+  border-radius: 19px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: orange;
+  }
+
+   &__card-room {
+
+  }
+
+   &--free {
+    background-color: chocolate;
+  }
+
+   &--selected {
+    background-color: #666;
+  }
+}

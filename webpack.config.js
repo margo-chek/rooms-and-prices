@@ -15,7 +15,17 @@ module.exports = {
                     fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
                 })
-            }
+            },
+            { test: /\.( gif | png | jpe ? g | svg )$/, use: 'image-webpack-loader' },
+            { test: /\.ttf$/,
+                use: [
+                    {
+                        loader: 'ttf-loader',
+                        options: {
+                            name: './theme/font/[hash].[ext]',
+                        },
+                    },
+                ] }
         ]
     },
     plugins: [

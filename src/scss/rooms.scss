@@ -1,0 +1,23 @@
+@import "mixins";
+@import "variables";
+
+.rooms {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    //color: red;
+    margin-bottom: 55px;
+    color: $color-main;
+  }
+
+  &__card-container {
+    display: flex;
+    flex-direction: row;
+
+    // @media (min-width: $screen-lg) { ... }
+  }
+}

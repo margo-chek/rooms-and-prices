@@ -1,0 +1,51 @@
+.card-room {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__img {
+
+    &__motivator {
+      display: none;
+    }
+  }
+
+  .img-executive-suit {
+    background: url("../assets/executive-suite.jpeg") no-repeat;
+  }
+
+  .img-duplex {
+    background: url("../assets/duplex.jpeg") no-repeat;
+  }
+
+  .img-business-suit {
+    background: url("../assets/business-suite.jpeg") no-repeat;
+  }
+
+  &__subtitle {
+    color: maroon;
+  }
+
+  &__discription {
+    color: chocolate;
+  }
+
+  &__price {
+    color: black;
+
+    &:after {
+      content: "";
+      margin-top: 30px;
+      background-color: #45c3aa;
+      border-radius: 5px;
+      display: block;
+      height: 6px;
+      width: 60px;
+      margin-bottom: 43px;
+    }
+
+    &__value {
+      color: blue;
+    }
+  }
+}

@@ -5,22 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/style.css" />
     <title>Rooms and prices</title>
-    <!-- <script src="js/main.js"></script> -->
   </head>
-  <body>
-    <main class="b-page-rooms-prices">
-      <h1 class="b-page-rooms-prices__title">НОМЕРА И ЦЕНЫ</h1>
-      <div class="b-page-rooms-prices__card-container">
-        <div class="b-room-card">
-          <div class="b-room-card__img-container">
-            <img src="assets/room.png" class="b-room-card__img" alt="img"/>
+  <body class="body body--background">
+    <main class="rooms">
+      <h1 class="rooms__title">НОМЕРА И ЦЕНЫ</h1>
+      <div class="rooms__card-container">
+        <div class="card-room">
+          <div class="card-room__img img-executive-suit">
+            <img src="assets/motivator.png" class="card-room__motivator" alt="motivator" />
           </div>
-          <p class="b-room-card__subtitle">Представительский люкс</p>
-          <span class="b-room-card__discription">Эксклюзивный номер с панорамным видом на центр города Москвы</span>
-          <p class="b-room-card__price">
-            от <span class="b-room-card__value">7900</span> руб./сутки
+          <p class="card-room__subtitle">Представительский люкс</p>
+          <span class="card-room__discription">Эксклюзивный номер с панорамным видом на центр города Москвы</span>
+          <p class="card-room__price">
+            от <span class="card-room__value">7900</span> руб./сутки
           </p>
-          <button class="button button-normal">Забронировать</button>
+          <button class="button card-room__button button--free">Забронировать</button>
+        </div>
+        <div class="card-room">
+          <div class="card-room__img img-duplex">
+            <img src="assets/motivator.png" class="card-room__motivator" alt="motivator" />
+          </div>
+          <p class="card-room__subtitle">Дуплекс</p>
+          <span class="card-room__discription">Просторный двухкомнатный номер с шикарным видос на парк</span>
+          <p class="card-room__price">
+            от <span class="card-room__value">5700</span> руб./сутки
+          </p>
+          <button class="button button__card-room button--selected">Забронировать</button>
+        </div>
+        <div class="card-room">
+          <div class="card-room__img img-business-suit">
+            <img src="assets/motivator.png" class="card-room__motivator" alt="motivator" />
+          </div>
+          <p class="card-room__subtitle">Бизнес-люкс</p>
+          <span class="card-room__discription">Трехкомнатный номер с панорамным видом на Москва-реку</span>
+          <p class="card-room__price">
+            от <span class="card-room__value">4900</span> руб./сутки
+          </p>
+          <button class="button card-room__button button--free">Забронировать</button>
         </div>
       </div>
       <script type="text/javascript" src="../dist/bundle.js"></script>
