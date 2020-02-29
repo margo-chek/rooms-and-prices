@@ -1,13 +1,25 @@
+@import "variables";
+
+$heightSubtitle: calc(#{2*$subtitleFontSize*$mediumLineHeight});
+$heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
+
 .card-room {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 589px;
+  width: 370px;
+  background-color: $whiteColor;
 
   &__img {
+    min-height: 230px;
+    width: 370px;
+  }
 
-    &__motivator {
-      display: none;
-    }
+  &__motivator {
+    display: none;
+    margin: 10px;
   }
 
   .img-executive-suit {
@@ -23,29 +35,59 @@
   }
 
   &__subtitle {
-    color: maroon;
+    color: $brownColor;
+    line-height: $mediumLineHeight;
+    font: $subtitleFontSize $titleFont;
+    min-height: $heightSubtitle;
   }
 
   &__discription {
-    color: chocolate;
+    color: $darkBlackTextColor;
+    line-height: $largerLineHeight;
+    font: $mediumFontSize $mainFont;
+    min-height: 48px;
   }
 
   &__price {
-    color: black;
+    color: $lightBlackTextColor;
+    line-height: $mediumLineHeight;
+    font: $largeFontSize $titleFont;
 
-    &:after {
+    &:before {
       content: "";
-      margin-top: 30px;
-      background-color: #45c3aa;
-      border-radius: 5px;
+      margin-bottom: 30px;
+      background-color: $lineColor;
       display: block;
-      height: 6px;
-      width: 60px;
-      margin-bottom: 43px;
+      height: 1px;
     }
+  }
 
-    &__value {
-      color: blue;
-    }
+  &__value {
+    color: $brownColor;
+  }
+
+  //&:not(.card-room--selected) &--motivator:hover > &__img > &__motivator {
+  //  display: flex;
+  //  z-index: 99;
+  //}
+
+  //&:not(.card-room--selected){
+  .card-room--motivator:hover > .card-room__img > .card-room__motivator {
+    display: flex;
+    z-index: 99;
+  }
+  //}
+
+  //&:not(.card-room--selected){
+  //  background-color: #0275d8;
+  //}
+
+  &--size-text {
+    width: 310px;
+    text-align: center;
+  }
+
+  &--selected {
+    opacity: 0.4;
   }
 }

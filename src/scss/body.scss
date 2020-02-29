@@ -1,14 +1,14 @@
 .body {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
-  // flex-basis: 100%;
+  flex-basis: 100%;
   min-height: 100vh;
-  // background: $bg-color;
   flex-wrap: wrap;
   align-content: center;
+  justify-content: center;
 
   &--background {
-    background-image: url('../assets/bg-gradient.png');
+    background: url('../assets/bg-gradient.png') repeat-x;
+    background-size: cover;
   }
 }

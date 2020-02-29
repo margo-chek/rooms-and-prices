@@ -1,23 +1,26 @@
-@import "mixins";
-@import "variables";
+@import 'mixins';
+@import 'variables';
 
 .rooms {
-  font-size: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 699px;
+  width: 1172px;
 
   &__title {
-    //color: red;
-    margin-bottom: 55px;
-    color: $color-main;
+    color: $brownColor;
+    text-transform: uppercase;
+    line-height: $mediumLineHeight;
+    font: $titleFontSize $titleFont;
   }
 
   &__card-container {
     display: flex;
     flex-direction: row;
-
+    justify-content: space-between;
+    width: 100%;
     // @media (min-width: $screen-lg) { ... }
   }
 }
