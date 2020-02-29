@@ -8,18 +8,30 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 589px;
-  width: 370px;
+  height: 584px;
+  width: 360px;
   background-color: $whiteColor;
+  border-left: 5px solid $mainBorderColor;
+  border-right: 5px solid $mainBorderColor;
+  border-bottom: 5px solid $mainBorderColor;
+  cursor: default;
+
+  &:hover {
+    border-color: $hoverBorderColor;
+  }
 
   &__img {
     min-height: 230px;
     width: 370px;
+    z-index: 9;
   }
 
   &__motivator {
     display: none;
     margin: 10px;
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
   }
 
   .img-executive-suit {
@@ -35,7 +47,7 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
   }
 
   &__subtitle {
-    color: $brownColor;
+    color: $mainBrownColor;
     line-height: $mediumLineHeight;
     font: $subtitleFontSize $titleFont;
     min-height: $heightSubtitle;
@@ -63,7 +75,7 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
   }
 
   &__value {
-    color: $brownColor;
+    color: $mainBrownColor;
   }
 
   //&:not(.card-room--selected) &--motivator:hover > &__img > &__motivator {
@@ -72,7 +84,7 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
   //}
 
   //&:not(.card-room--selected){
-  .card-room--motivator:hover > .card-room__img > .card-room__motivator {
+  &--motivator:hover > &__img > &__motivator {
     display: flex;
     z-index: 99;
   }
@@ -89,5 +101,10 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
 
   &--selected {
     opacity: 0.4;
+    border-color: $selectedBorderColor;
+  }
+
+  &--disabled {
+    cursor: default;
   }
 }

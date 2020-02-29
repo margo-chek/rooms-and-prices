@@ -10,7 +10,7 @@
 
   &:hover {
     cursor: pointer;
-    opacity: 0.8;
+    background-color: $brownHoverBtnColor;
   }
 
    &__card-room {
@@ -18,10 +18,10 @@
   }
 
    &--free {
-    background-color: #6e5523; //
+    background-color: $brownBtnColor;
   }
 
    &--selected {
-    background-color: #bcbcbc; //188 188 188
+    background-color: $selectedBtnColor;
   }
 }

@@ -22,10 +22,8 @@ function addClass(element, button, className) {
     element.classList.add(className);
 }
 
-
 function selectRoom(event) {
     const room = event.target.closest('.card-room');
     const button = event.target.closest('.button__card-room');
     addClass(room, button, 'card-room--selected');
 }
-
