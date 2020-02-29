@@ -14,7 +14,6 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
   border-left: 5px solid $mainBorderColor;
   border-right: 5px solid $mainBorderColor;
   border-bottom: 5px solid $mainBorderColor;
-  cursor: default;
 
   &:hover {
     border-color: $hoverBorderColor;
