@@ -16,16 +16,13 @@ module.exports = {
                     use: ['css-loader', 'sass-loader']
                 })
             },
-            { test: /\.( gif | png | jpe ? g | svg )$/, use: 'image-webpack-loader' },
-            { test: /\.ttf$/,
-                use: [
-                    {
-                        loader: 'ttf-loader',
-                        options: {
-                            name: './theme/font/[hash].[ext]',
-                        },
-                    },
-                ] }
+            {
+                test: /\.(gif|png|jpe?g|svg|ttf)$/i,
+                loader: 'url-loader',
+                options:{
+                    limit: 8192,
+                }
+            }
         ]
     },
     plugins: [
