@@ -7,9 +7,21 @@
   align-content: center;
   justify-content: center;
   cursor: default;
+  overflow-y: auto;
+  scrollbar-width: none; // Firefox;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+  }
 
   &--background {
     background: url('../assets/bg-gradient.png') repeat-x;
-    background-size: cover;
+  }
+
+  @media (max-width: 991px) {
+    align-content: flex-start;
+    min-height: 100%;
   }
 }

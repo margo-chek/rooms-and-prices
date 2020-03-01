@@ -1,11 +1,14 @@
 function clearSelection(event) {
     const room = event.target.closest('.card-room--selected');
     const button = room.querySelector('.button__card-room');
-    removeClass(room, button, 'card-room--selected');
+    document.addEventListener("mouseleave", function(event) {
+        removeClass(room, button, 'card-room--selected');
+    });
 }
 
 function removeClass(element, button, className) {
     button.innerHTML = "Забронировать";
+    button.classList.remove("button--selected");
     element.classList.remove(className);
 }
 
@@ -19,11 +22,14 @@ document.addEventListener("click", function(event) {
 
 function addClass(element, button, className) {
     button.innerHTML = "Подробнее";
+    button.classList.add("button--selected");
     element.classList.add(className);
 }
 
 function selectRoom(event) {
     const room = event.target.closest('.card-room');
     const button = event.target.closest('.button__card-room');
-    addClass(room, button, 'card-room--selected');
+    document.addEventListener("mouseleave", function(event) {
+        addClass(room, button, 'card-room--selected');
+    });
 }

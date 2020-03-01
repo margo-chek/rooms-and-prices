@@ -7,20 +7,43 @@
   justify-content: space-between;
   align-items: center;
   height: 699px;
-  width: 1172px;
+  width: 100%;
+  max-width: 1172px;
+  min-width: 320px;
+
+  @media (max-width: 767px) {
+    width: auto;
+  }
 
   &__title {
     color: $mainBrownColor;
     text-transform: uppercase;
     line-height: $mediumLineHeight;
     font: $titleFontSize $titleFont;
+
+    @media (max-width: 991px) {
+      margin: 12px 0;
+    }
+
+    @media (max-width: 767px) {
+      font-size: $subtitleFontSize;
+    }
   }
 
   &__card-container {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
     justify-content: space-between;
     width: 100%;
-    // @media (min-width: $screen-lg) { ... }
+
+    @media (max-width: 991px) {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 767px) {
+      flex-flow: column;
+      align-items: center;
+    }
   }
 }

@@ -8,20 +8,16 @@
   color: $whiteColor;
   line-height: $largerLineHeight;
 
-  &:hover {
-    cursor: pointer;
-    background-color: $brownHoverBtnColor;
-  }
-
    &__card-room {
      margin-bottom: 50px;
   }
 
-   &--free {
-    background-color: $brownBtnColor;
+  &:not(.button--selected).button__card-room:hover {
+    cursor: pointer;
+    background-color: $brownHoverBtnColor;
   }
 
-   &--selected {
-    background-color: $selectedBtnColor;
+   &--free {
+    background-color: $brownBtnColor;
   }
 }
