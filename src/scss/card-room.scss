@@ -75,7 +75,6 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
     border-bottom: 5px solid #e4dfd2;
 
     @media (max-width: 767px) {
-      height: 320px;
       width: auto;
     }
   }
