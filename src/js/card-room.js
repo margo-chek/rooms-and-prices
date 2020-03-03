@@ -1,35 +1,59 @@
-function clearSelection(event) {
-    const room = event.target.closest('.card-room--selected');
-    const button = room.querySelector('.button__card-room');
-    document.addEventListener("mouseleave", function(event) {
-        removeClass(room, button, 'card-room--selected');
-    });
-}
-
-function removeClass(element, button, className) {
-    button.innerHTML = "Забронировать";
-    button.classList.remove("button--selected");
-    element.classList.remove(className);
-}
-
 document.addEventListener("click", function(event) {
-    if (event.target.closest(".card-room--selected")) {
-        clearSelection(event);
-    } else if(event.target.className.includes("button__card-room")){
-        selectRoom(event);
+    if (event.target.parentNode.parentNode.parentNode !== null &&
+        event.target.parentNode.parentNode.parentNode !== undefined) {
+        if (event.target.parentNode && event.target.parentNode.className.indexOf("card-room--selected")!== -1) {
+            clearSelection(event.target.parentNode);
+        } else if (event.target.parentNode.parentNode &&
+            event.target.parentNode.parentNode.className.indexOf("card-room--selected")!== -1) {
+            clearSelection(event.target.parentNode.parentNode);
+        } else if (event.target.parentNode.parentNode.parentNode &&
+            event.target.parentNode.parentNode.parentNode.className.indexOf("card-room--selected")!== -1) {
+            clearSelection(event.target.parentNode.parentNode.parentNode);
+        } else if (event.target.className.indexOf("button__card-room") !== -1) {
+            selectRoom(event);
+        }
     }
 });
 
-function addClass(element, button, className) {
-    button.innerHTML = "Подробнее";
-    button.classList.add("button--selected");
-    element.classList.add(className);
+function clearSelection(eventRoom) {
+    const button = eventRoom.querySelector('.button__card-room');
+    const img = eventRoom.querySelector('.card-room__img');
+    document.addEventListener("mouseout", function(event) {
+        removeClass(eventRoom, button, img, 'card-room--selected');
+    });
 }
 
 function selectRoom(event) {
-    const room = event.target.closest('.card-room');
-    const button = event.target.closest('.button__card-room');
-    document.addEventListener("mouseleave", function(event) {
-        addClass(room, button, 'card-room--selected');
+    const room = event.target.parentNode.parentNode;
+    const button = room.querySelector('.button__card-room');
+    const img = room.querySelector('.card-room__img');
+    document.addEventListener("mouseout", function(event) {
+        addClass(room, button, img, 'card-room--selected');
     });
+}
+
+function removeClass(element, button, img, className) {
+    button.innerHTML = "Забронировать";
+    button.classList.remove("button--selected");
+    element.classList.remove(className);
+    if (img.className.indexOf("img-executive-suit") !== -1) {
+        img.classList.remove("img-executive-suit--BW");
+    } else if (imag.className.indexOf("img-duplex") !== -1){
+        img.classList.remove("img-duplex--BW");
+    } else if (imag.className.indexOf("img-business-suit") !== -1) {
+        img.classList.remove("img-business-suit--BW");
+    }
+}
+
+function addClass(element, button, img, className) {
+    button.innerHTML = "Подробнее";
+    button.classList.add("button--selected");
+    element.classList.add(className);
+    if (img.className.indexOf("img-executive-suit") !== -1) {
+        img.classList.add("img-executive-suit--BW");
+    } else if (imag.className.indexOf("img-duplex") !== -1) {
+        img.classList.add("img-duplex--BW");
+    } else if (imag.className.indexOf("img-business-suit") !== -1) {
+        img.classList.add("img-business-suit--BW");
+    }
 }

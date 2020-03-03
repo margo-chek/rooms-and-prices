@@ -45,6 +45,18 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
     background: url("../assets/business-suite.jpeg") no-repeat;
   }
 
+  .img-executive-suit--BW {
+    background: url("../assets/executive-suite-selected.jpeg") no-repeat;
+  }
+
+  .img-duplex--BW {
+    background: url("../assets/duplex-selected.jpeg") no-repeat;
+  }
+
+  .img-business-suit--BW {
+    background: url("../assets/business-suite-selected.jpeg") no-repeat;
+  }
+
   &__content{
     display: flex;
     flex-direction: column;
