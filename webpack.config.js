@@ -17,7 +17,7 @@ module.exports = {
                 })
             },
             {
-                test: /\.(gif|png|jpe?g|svg|ttf)$/i,
+                test: /\.(gif|png|jpe?g|svg|ttf|woff|woff2)$/i,
                 loader: 'url-loader',
                 options:{
                     limit: 8192,

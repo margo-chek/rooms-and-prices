@@ -14,11 +14,17 @@ html {
 }
 
 @font-face {
-  font-family: "PT Sans";
-  src: url("fonts/PTSansRegular.ttf") format("truetype");
+  font-family: 'PT Sans';
+  src: url('fonts/PTSansRegular.woff2') format('woff2'), // ../theme/
+       url('fonts/PTSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Noto Serif";
-  src: url("fonts/NotoSerifRegular.ttf") format("truetype");
+  font-family: 'Noto Serif';
+  src: url('fonts/NotoSerifRegular.woff2') format('woff2'),
+       url('fonts/NotoSerif.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

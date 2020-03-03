@@ -37,23 +37,23 @@ function removeClass(element, button, img, className) {
     button.classList.remove("button--selected");
     element.classList.remove(className);
     if (img.className.indexOf("img-executive-suit") !== -1) {
-        img.classList.remove("img-executive-suit--BW");
-    } else if (imag.className.indexOf("img-duplex") !== -1){
-        img.classList.remove("img-duplex--BW");
-    } else if (imag.className.indexOf("img-business-suit") !== -1) {
-        img.classList.remove("img-business-suit--BW");
+        img.classList.remove("img-executive-suit--selected");
+    } else if (img.className.indexOf("img-duplex") !== -1){
+        img.classList.remove("img-duplex--selected");
+    } else if (img.className.indexOf("img-business-suit") !== -1) {
+        img.classList.remove("img-business-suit--selected");
     }
 }
 
 function addClass(element, button, img, className) {
-    button.innerHTML = "Подробнее";
+    // button.innerHTML = "Подробнее";
     button.classList.add("button--selected");
     element.classList.add(className);
     if (img.className.indexOf("img-executive-suit") !== -1) {
-        img.classList.add("img-executive-suit--BW");
-    } else if (imag.className.indexOf("img-duplex") !== -1) {
-        img.classList.add("img-duplex--BW");
-    } else if (imag.className.indexOf("img-business-suit") !== -1) {
-        img.classList.add("img-business-suit--BW");
+        img.classList.add("img-executive-suit--selected");
+    } else if (img.className.indexOf("img-duplex") !== -1) {
+        img.classList.add("img-duplex--selected");
+    } else if (img.className.indexOf("img-business-suit") !== -1) {
+        img.classList.add("img-business-suit--selected");
     }
 }

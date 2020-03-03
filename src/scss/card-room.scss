@@ -45,16 +45,19 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
     background: url("../assets/business-suite.jpeg") no-repeat;
   }
 
-  .img-executive-suit--BW {
+  .img-executive-suit--selected {
     background: url("../assets/executive-suite-selected.jpeg") no-repeat;
+    opacity: 0.5;
   }
 
-  .img-duplex--BW {
+  .img-duplex--selected {
     background: url("../assets/duplex-selected.jpeg") no-repeat;
+    opacity: 0.5;
   }
 
-  .img-business-suit--BW {
+  .img-business-suit--selected {
     background: url("../assets/business-suite-selected.jpeg") no-repeat;
+    opacity: 0.5;
   }
 
   &__content{
@@ -129,12 +132,15 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
     text-align: center;
   }
 
-  &--selected {
-    opacity: 0.4;
-    border-color: $selectedBorderColor;
+  &--selected > .card-room__content {
+    opacity: 0.5;
   }
 
-  &--disabled {
-    cursor: default;
+  &--selected > .card-room__content > .card-room__subtitle {
+    color: $lightBlackTextColor;
+  }
+
+  &--selected > .card-room__content > .3card-room__price > .card-room__value {
+    color: $lightBlackTextColor;
   }
 }

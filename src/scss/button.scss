@@ -9,7 +9,7 @@
   line-height: $largerLineHeight;
 
    &__card-room {
-     margin-bottom: 50px;
+     margin: 26px 0 50px 0;
   }
 
   &:not(.button--selected).button__card-room:hover {
@@ -20,4 +20,14 @@
    &--free {
     background-color: $brownBtnColor;
   }
+
+   &--selected {
+     background-color: $selectedBtnColor;
+     color: transparent;
+   }
+   &--selected:after {
+     content: "Подробнее";
+     color: $whiteColor;
+     margin-left: -95px;
+   }
 }

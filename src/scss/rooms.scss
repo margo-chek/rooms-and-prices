@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 699px;
   width: 100%;
   max-width: 1172px;
   min-width: 320px;
@@ -20,6 +19,7 @@
     text-transform: uppercase;
     line-height: $mediumLineHeight;
     font: $titleFontSize $titleFont;
+    margin-bottom: 70px;
 
     @media (max-width: 991px) {
       margin: 12px 0;
