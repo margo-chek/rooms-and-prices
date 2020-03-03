@@ -25,6 +25,7 @@
      background-color: $selectedBtnColor;
      color: transparent;
    }
+
    &--selected:after {
      content: "Подробнее";
      color: $whiteColor;

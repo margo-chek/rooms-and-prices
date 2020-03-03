@@ -6,9 +6,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  align-self: center;
   width: 100%;
   max-width: 1172px;
   min-width: 320px;
+  max-height: 699px;
 
   @media (max-width: 767px) {
     width: auto;
