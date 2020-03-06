@@ -20,7 +20,7 @@
     background: url('../assets/bg-gradient.png') repeat-x;
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: $screen-lg) {
     align-content: flex-start;
     min-height: 100%;
   }

@@ -2,79 +2,69 @@
 
 $heightSubtitle: calc(#{2*$subtitleFontSize*$mediumLineHeight});
 $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
+$borderContent: 5px solid $mainBorderColor;
 
 .card-room {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   align-items: center;
   max-width: 370px;
   min-width: 320px;
   width: 100%;
+  height: 100%;
   background-color: $whiteColor;
   margin: 4px;
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-md) {
     margin: 4px 0;
   }
 
-  &__img {
-    min-height: 230px;
-    max-width: 370px;
-    width: 100%;
-    z-index: 80;
-  }
-
-  &__motivator {
+  &--motivator::after {
+    content: "";
     display: none;
-    margin: 10px;
+    position: absolute;
+    height: 62px;
+    width: 62px;
+    top: 10px;
+    left: 10px;
+    background: url("../assets/motivator.png") no-repeat;
+    z-index: 99;
     transition: $transition;
     -webkit-transition: $transition;
     -moz-transition: $transition;
   }
 
-  .img-executive-suit {
-    background: url("../assets/executive-suite.jpeg") no-repeat;
+  &__img {
+    min-height: 230px;
+    max-width: 370px;
+    min-width: 310px;
+    width: 100%;
+
+    &--gray {
+      filter: grayscale(1);
+      opacity: 0.5;
+    }
   }
 
-  .img-duplex {
-    background: url("../assets/duplex.jpeg") no-repeat;
-  }
-
-  .img-business-suit {
-    background: url("../assets/business-suite.jpeg") no-repeat;
-  }
-
-  .img-executive-suit--selected {
-    background: url("../assets/executive-suite-selected.jpeg") no-repeat;
-    opacity: 0.5;
-  }
-
-  .img-duplex--selected {
-    background: url("../assets/duplex-selected.jpeg") no-repeat;
-    opacity: 0.5;
-  }
-
-  .img-business-suit--selected {
-    background: url("../assets/business-suite-selected.jpeg") no-repeat;
-    opacity: 0.5;
-  }
-
-  &__content{
+  &__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 354px;
-    max-width: 360px;
-    min-width: 310px;
+    align-self: stretch;
+    min-height: 354px;
+    max-width: 310px;
+    min-width: 210px;
+    padding: 31px 25px 45px 25px;
     width: 100%;
-    background-color: #fff;
-    border-left: 5px solid #e4dfd2;
-    border-right: 5px solid #e4dfd2;
-    border-bottom: 5px solid #e4dfd2;
+    background-color: $whiteColor;
+    border-left: $borderContent;
+    border-right: $borderContent;
+    border-bottom: $borderContent;
 
-    @media (max-width: 767px) {
+    @media (max-width: $screen-md) {
       width: auto;
     }
   }
@@ -84,7 +74,6 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
     line-height: $mediumLineHeight;
     font: $subtitleFontSize $titleFont;
     min-height: $heightSubtitle;
-    margin-top: 30px;
   }
 
   &__discription {
@@ -94,52 +83,47 @@ $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
     min-height: 48px;
   }
 
+  &__line {
+    background-color: $lineColor;
+    display: block;
+    height: 1px;
+    width: 100%;
+  }
+
   &__price {
     color: $lightBlackTextColor;
     line-height: $mediumLineHeight;
     font: $largeFontSize $titleFont;
-
-    &:before {
-      content: "";
-      margin-bottom: 30px;
-      background-color: $lineColor;
-      display: block;
-      height: 1px;
-
-      @media (max-width: 767px) {
-        margin-bottom: 20px;
-      }
-    }
   }
 
   &__value {
     color: $mainBrownColor;
   }
 
-  &:not(.card-room--selected).card-room--motivator:hover > .card-room__img > .card-room__motivator {
+  &:not(.card-room--selected).card-room--motivator:hover.card-room--motivator::after {
     display: flex;
-    z-index: 99;
   }
 
-  &:not(.card-room--selected).card-room:hover > .card-room__content{
-      border-color: $hoverBorderColor;
+  &:not(.card-room--selected).card-room:hover > .card-room__content {
+    border-color: $hoverBorderColor;
   }
 
   &--size-text {
-    max-width: 310px;
     width: 100%;
     text-align: center;
   }
 
   &--selected > .card-room__content {
-    opacity: 0.5;
+    border-color: $selectedBorderColor;
   }
 
-  &--selected > .card-room__content > .card-room__subtitle {
-    color: $lightBlackTextColor;
-  }
-
+  &--selected > .card-room__content > .card-room__subtitle,
+  &--selected > .card-room__content > .card-room__price,
   &--selected > .card-room__content > .card-room__price > .card-room__value {
-    color: $lightBlackTextColor;
+    color: $selectedLightBlackColor;
+  }
+
+  &--selected > .card-room__content > .card-room__discription {
+    color: $selectedDarkBlackColor;
   }
 }

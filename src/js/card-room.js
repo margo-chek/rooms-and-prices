@@ -37,23 +37,11 @@ function selectRoom(event) {
 function removeClass(element, button, img, className) {
     button.classList.remove('button--selected');
     element.classList.remove(className);
-    if (img.className.indexOf('img-executive-suit') !== -1) {
-        img.classList.remove('img-executive-suit--selected');
-    } else if (img.className.indexOf('img-duplex') !== -1) {
-        img.classList.remove('img-duplex--selected');
-    } else if (img.className.indexOf('img-business-suit') !== -1) {
-        img.classList.remove('img-business-suit--selected');
-    }
+    img.classList.remove('card-room__img--gray');
 }
 
 function addClass(element, button, img, className) {
     button.classList.add('button--selected');
     element.classList.add(className);
-    if (img.className.indexOf('img-executive-suit') !== -1) {
-        img.classList.add('img-executive-suit--selected');
-    } else if (img.className.indexOf('img-duplex') !== -1) {
-        img.classList.add('img-duplex--selected');
-    } else if (img.className.indexOf('img-business-suit') !== -1) {
-        img.classList.add('img-business-suit--selected');
-    }
+    img.classList.add('card-room__img--gray');
 }

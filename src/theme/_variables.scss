@@ -1,30 +1,32 @@
-$transition:            all 0.3s ease;
+$transition:               all 0.3s ease;
 
-$titleFont:             'Noto Serif';
-$mainFont:              'PT Sans', sans-serif;
+$titleFont:                'Noto Serif';
+$mainFont:                 'PT Sans', sans-serif;
 
-$titleFontSize:         42px;
-$subtitleFontSize:      28px;
-$largeFontSize:         18px;
-$mediumFontSize:        16px;
+$titleFontSize:            42px;
+$subtitleFontSize:         28px;
+$largeFontSize:            18px;
+$mediumFontSize:           16px;
 
-$mediumLineHeight:      1.2;
-$largerLineHeight:      1.5;
+$mediumLineHeight:         1.2;
+$largerLineHeight:         1.5;
 
-$whiteColor:            rgb(255, 255, 255);
-$darkBlackTextColor:    rgb(30, 30, 30);
-$lightBlackTextColor:   rgb(75, 75, 75);
-$mainBrownColor:        rgb(105, 87, 65);
-$brownBtnColor:         rgb(111, 91, 45);
-$brownHoverBtnColor:    rgb(150, 132, 88);
-$selectedBtnColor:      rgb(87, 87, 87);
-$mainBorderColor:       rgb(228, 223, 210);
-$hoverBorderColor:      rgb(255, 255, 255);
-$selectedBorderColor:   rgb(215, 215, 215);
-$lineColor:             rgb(218, 218, 218);
+$whiteColor:               #fff;
+$darkBlackTextColor:       #1e1e1e;
+$lightBlackTextColor:      #4b4b4b;
+$mainBrownColor:           #70563d;
+$selectedDarkBlackColor:   #a3a3a3;
+$selectedLightBlackColor:  #909090;
+$brownBtnColor:            #775b25;
+$brownHoverBtnColor:       #9e8555;
+$selectedBtnColor:         #bcbcbc;
+$mainBorderColor:          #e7e0d3;
+$hoverBorderColor:         #fff;
+$selectedBorderColor:      #d8d8d8;
+$lineColor:                #dbdbdb;
 
-$screen-xs:             320px;
-$screen-sm:             480px;
-$screen-md:             768px;
-$screen-lg:             992px;
-$screen-xl:             1200px;
+$screen-xs:                320px;
+$screen-sm:                480px;
+$screen-md:                767px;
+$screen-lg:                991px;
+$screen-xl:                1200px;
