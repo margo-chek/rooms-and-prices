@@ -18,30 +18,34 @@ document.addEventListener('click', function(event) {
 });
 
 function clearSelection(eventRoom) {
-    const button = eventRoom.querySelector('.button__card-room');
+    const buttonFree = eventRoom.querySelector('.button--free');
+    const buttonDisabled = eventRoom.querySelector('.button--disabled');
     const img = eventRoom.querySelector('.card-room__img');
     document.addEventListener('mouseout', function() {
-        removeClass(eventRoom, button, img, 'card-room--selected');
+        removeClass(eventRoom, buttonFree, buttonDisabled, img, 'card-room--selected');
     });
 }
 
 function selectRoom(event) {
     const room = event.target.parentNode.parentNode;
-    const button = room.querySelector('.button__card-room');
+    const buttonFree = room.querySelector('.button--free');
+    const buttonDisabled = room.querySelector('.button--disabled');
     const img = room.querySelector('.card-room__img');
     document.addEventListener('mouseout', function() {
-        addClass(room, button, img, 'card-room--selected');
+        addClass(room, buttonFree, buttonDisabled, img, 'card-room--selected');
     });
 }
 
-function removeClass(element, button, img, className) {
-    button.classList.remove('button--selected');
+function removeClass(element, buttonFree, buttonDisabled, img, className) {
+    buttonFree.classList.remove('button--selected');
+    buttonDisabled.classList.remove('button--selected');
     element.classList.remove(className);
     img.classList.remove('card-room__img--gray');
 }
 
-function addClass(element, button, img, className) {
-    button.classList.add('button--selected');
+function addClass(element, buttonFree, buttonDisabled, img, className) {
+    buttonFree.classList.add('button--selected');
+    buttonDisabled.classList.add('button--selected');
     element.classList.add(className);
     img.classList.add('card-room__img--gray');
 }

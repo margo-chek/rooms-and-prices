@@ -15,17 +15,15 @@
   }
 
    &--free {
-    background-color: $brownBtnColor;
+     background-color: $brownBtnColor;
   }
 
-   &--selected {
+  &--disabled {
      background-color: $selectedBtnColor;
-     color: transparent;
    }
 
-   &--selected::after {
-     content: "Подробнее";
-     color: $whiteColor;
-     margin-left: -95px;
-   }
+  &:not(.button--selected).button--disabled,
+  &--selected.button--free {
+    display: none;
+  }
 }
