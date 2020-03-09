@@ -1,6 +1,6 @@
 @import "variables";
 
-$heightSubtitle: calc(#{2*$subtitleFontSize*$mediumLineHeight});
+$heightSubtitle: calc(#{2*$maxSubtitleFontSize*$mediumLineHeight});
 $heightDiscription: calc(#{2*$mediumFontSize*$largerLineHeight});
 $borderContent: 5px solid $mainBorderColor;
 
@@ -11,14 +11,19 @@ $borderContent: 5px solid $mainBorderColor;
   position: relative;
   align-items: center;
   max-width: 370px;
-  min-width: 320px;
-  width: 100%;
+  min-width: 310px;
+  width: 32%;
   height: 100%;
   background-color: $whiteColor;
   margin: 4px;
 
+  @media (max-width: $screen-lg) {
+    width: 50%;
+  }
+
   @media (max-width: $screen-md) {
     margin: 4px 0;
+    width: 100%;
   }
 
   &--motivator::after {
@@ -55,10 +60,9 @@ $borderContent: 5px solid $mainBorderColor;
     align-items: center;
     align-self: stretch;
     min-height: 354px;
-    max-width: 310px;
-    min-width: 210px;
+    max-width: 320px;
+    min-width: 250px;
     padding: 31px 25px 45px 25px;
-    width: 100%;
     background-color: $whiteColor;
     border-left: $borderContent;
     border-right: $borderContent;
@@ -72,8 +76,13 @@ $borderContent: 5px solid $mainBorderColor;
   &__subtitle {
     color: $mainBrownColor;
     line-height: $mediumLineHeight;
-    font: $subtitleFontSize $titleFont;
+    font: $maxSubtitleFontSize $titleFont;
+    min-width: 320px;
     min-height: $heightSubtitle;
+
+    @media (max-width: $screen-md) {
+      font-size: $minSubtitleFontSize;
+    }
   }
 
   &__discription {
